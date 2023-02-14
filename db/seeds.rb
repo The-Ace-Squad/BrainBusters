@@ -1,16 +1,16 @@
 posts = [
   {
-    id: 1
-    user_id: 1
-    post_title: "Week two assessment problem three code challenge"
-    post_content: "Please share answer for problem three on week two assessment"
-    category_tag: "assessments"
+    id: 1,
+    user_id: 1,
+    post_title: "Week two assessment problem three code challenge",
+    post_content: "Please share answer for problem three on week two assessment",
+    category_tag: "assessments",
     create_date: 2023-02-14
   },
   {
-    id: 2
-    user_id: 2
-    post_title: "Bo's Peanutbutter Noodles"
+    id: 2,
+    user_id: 2,
+    post_title: "Bo's Peanutbutter Noodles",
     post_content: "Hello Hotel Homies, I just realized I never sent over that recipe we spoke about the other day, so here it is!
     Bo's Spicy Peanut Butter Noodles:
     Ingredients:
@@ -36,8 +36,8 @@ posts = [
     Top with your protein
     Sprinkle on top sesame seeds and cilantro (if using)
     Drizzle on sesame oil (a little goes a long way)
-    Mix it altogether and ENJOY!"
-    category_tag: "random"
+    Mix it altogether and ENJOY!",
+    category_tag: "random",
     create_date: 2023-02-07
   }
 ]
