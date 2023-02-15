@@ -1,16 +1,23 @@
+user = User.create(
+  email: "capstonerman@gmail.com",
+  password: "123Rman!",
+  username: "capstonerman")
+user2 = User.create(
+  email: "notarthur@gmail.com",
+    password: "123Arthur!",
+    username: "arthur-look-a-like")
+
+
+
 posts = [
   {
-    id: 1
-    user_id: 1
-    post_title: "Week two assessment problem three code challenge"
-    post_content: "Please share answer for problem three on week two assessment"
-    category_tag: "assessments"
-    create_date: 2023-02-14
+    post_title: "Week two assessment problem three code challenge",
+    post_content: "Please share answer for problem three on week two assessment",
+    category_tag: "assessments",
+    create_date: "14-02-2023"
   },
   {
-    id: 2
-    user_id: 2
-    post_title: "Bo's Peanutbutter Noodles"
+    post_title: "Bo's Peanutbutter Noodles",
     post_content: "Hello Hotel Homies, I just realized I never sent over that recipe we spoke about the other day, so here it is!
     Bo's Spicy Peanut Butter Noodles:
     Ingredients:
@@ -36,9 +43,9 @@ posts = [
     Top with your protein
     Sprinkle on top sesame seeds and cilantro (if using)
     Drizzle on sesame oil (a little goes a long way)
-    Mix it altogether and ENJOY!"
-    category_tag: "random"
-    create_date: 2023-02-07
+    Mix it altogether and ENJOY!",
+    category_tag: "random",
+    create_date: "07-02-2023"
   }
 ]
 
@@ -46,7 +53,7 @@ posts = [
 
 
 
-posts.each do |each_post|
-  post.create each_post
-  puts "creating post #{each_post}"
+posts.each do |post|
+  user.posts.create(post)
+  puts "creating post #{post}"
 end
