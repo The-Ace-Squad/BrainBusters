@@ -1,21 +1,21 @@
-user = User.where(email: "test@example.com").first_or_create(password: "password", password_confirmation: "password")
+user = User.create(
+  email: "capstonerman@gmail.com",
+  password: "123Rman!",
+  username: "capstonerman")
+user2 = User.create(
+  email: "notarthur@gmail.com",
+    password: "123Arthur!",
+    username: "arthur-look-a-like")
 
-users =[
-  {
-    username: "capstonerman"
 
-  },
-  {
-    username: "arthur-look-a-like"
-  }
-]
+
 posts = [
   {
     user_id: 1,
     post_title: "Week two assessment problem three code challenge",
     post_content: "Please share answer for problem three on week two assessment",
     category_tag: "assessments",
-    create_date: 2023-02-14
+    create_date: "14-02-2023"
   },
   {
     user_id: 2,
@@ -47,7 +47,7 @@ posts = [
     Drizzle on sesame oil (a little goes a long way)
     Mix it altogether and ENJOY!",
     category_tag: "random",
-    create_date: 2023-02-07
+    create_date: "07-02-2023"
   }
 ]
 
@@ -55,7 +55,7 @@ posts = [
 
 
 
-posts.each do |each_post|
-  post.create each_post
-  puts "creating post #{each_post}"
+posts.each do |post|
+  user.posts.create(post)
+  puts "creating post #{post}"
 end
