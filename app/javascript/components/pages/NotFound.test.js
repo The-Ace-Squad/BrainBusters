@@ -1,10 +1,10 @@
-import React from "react"
 import { render } from "@testing-library/react"
-import Home from "./Home"
+import Notfound from "./Notfound"
+import React from "react"
 
-describe("<Home />", () => {
+describe("<Notfound />", () => {
   it("renders without crashing", () => {
     const div = document.createElement("div")
-    render(<Home />, div)
+    render(<Notfound />, div)
   })
 })

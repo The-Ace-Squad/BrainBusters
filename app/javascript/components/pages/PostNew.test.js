@@ -1,10 +1,10 @@
-import React from "react"
 import { render } from "@testing-library/react"
-import Home from "./Home"
+import PostNew from "./PostNew"
+import React from "react"
 
-describe("<Home />", () => {
+describe("<PostNew />", () => {
   it("renders without crashing", () => {
     const div = document.createElement("div")
-    render(<Home />, div)
+    render(<PostNew />, div)
   })
 })

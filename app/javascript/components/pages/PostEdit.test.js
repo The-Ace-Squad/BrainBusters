@@ -1,10 +1,10 @@
-import React from "react"
 import { render } from "@testing-library/react"
-import Home from "./Home"
+import PostEdit from "./PostEdit"
+import React from "react"
 
-describe("<Home />", () => {
+describe("<PostEdit />", () => {
   it("renders without crashing", () => {
     const div = document.createElement("div")
-    render(<Home />, div)
+    render(<PostEdit />, div)
   })
 })
