@@ -1,6 +1,16 @@
+user = User.where(email: "test@example.com").first_or_create(password: "password", password_confirmation: "password")
+
+users =[
+  {
+    username: "capstonerman"
+
+  },
+  {
+    username: "arthur-look-a-like"
+  }
+]
 posts = [
   {
-    id: 1,
     user_id: 1,
     post_title: "Week two assessment problem three code challenge",
     post_content: "Please share answer for problem three on week two assessment",
@@ -8,7 +18,6 @@ posts = [
     create_date: 2023-02-14
   },
   {
-    id: 2,
     user_id: 2,
     post_title: "Bo's Peanutbutter Noodles",
     post_content: "Hello Hotel Homies, I just realized I never sent over that recipe we spoke about the other day, so here it is!
