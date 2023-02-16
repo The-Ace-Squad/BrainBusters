@@ -14,6 +14,13 @@ class PostsController < ApplicationController
     end
     
     def update
+        post = Post.find(params[:id])
+        post.update(post_params)
+        if post.valid?
+            render json: post
+        else
+            render json: post.errors, status: 422
+        end
     end
     
     def destroy
