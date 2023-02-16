@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import MyPost from "./pages/MyPost"
 import PostShow from "./pages/PostShow"
@@ -13,8 +13,12 @@ const App = (props) => {
 
   const [posts, setPosts]= useState([])
 
+  useEffect(() => {
+    readPost()
+  }, [])
+
   const readPost = () => {
-    fetch("http://localhost:3000/posts")
+    fetch("/posts")
       .then((response) => response.json())
       .then((payload) => {
         setPosts(payload)
