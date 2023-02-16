@@ -36,5 +36,34 @@ RSpec.describe "Posts", type: :request do
       post2=Post.first
       expect(post2.post_title).to eq("Notes on Conditionals")
     end   
-  end  
+  end
+  describe "PATCH /update" do
+    it "updates a post" do
+      user = User.create(email:"test1@example.com", password:"123456", username:"exampletester")
+      post_params= {
+        post: {
+          user_id: user.id,
+          post_title: "Notes on Conditionals",
+          post_content: "Please share some notes on conditionals",
+          category_tag: "Notes",
+          create_date: "16-02-2023",
+        }
+      }
+      post "/posts", params: post_params
+      post = Post.first
+      updated_post_params= {
+        post: {
+          user_id: user.id,
+          post_title: "Notes on arrays",
+          post_content: "Please share some notes on conditionals",
+          category_tag: "Notes",
+          create_date: "16-02-2023",
+        }
+      }
+      patch "/posts/#{post.id}", params: updated_post_params
+      post3 = Post.last
+      expect(response).to have_http_status(200)
+      expect(post3.post_title).to eq("Notes on arrays")
+    end   
+  end    
 end
