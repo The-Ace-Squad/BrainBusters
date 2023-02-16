@@ -5,6 +5,12 @@ class PostsController < ApplicationController
     end
     
     def create
+        post = Post.create(post_params)
+        if post.valid?
+            render json: post
+        else
+            render json: post.errors, status: 422
+        end
     end
     
     def update
@@ -12,4 +18,9 @@ class PostsController < ApplicationController
     
     def destroy
     end  
+
+    private
+    def post_params
+        params.require(:post).permit(:user_id, :post_title, :post_content, :category_tag, :create_date, :share_file)
+    end
 end
