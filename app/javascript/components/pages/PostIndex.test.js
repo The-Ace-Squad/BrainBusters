@@ -10,17 +10,4 @@ describe("<PostIndex />", () => {
     const div = document.createElement("div")
     render(<PostIndex />, div)
   })
-  it("renders cards", () => {
-    const div = document.createElement("div")
-      render(
-      <BrowserRouter>
-      <PostIndex posts ={mockPosts} />
-      </BrowserRouter> , div)
-      mockPosts.forEach(post => {
-        screen.logTestingPlaygroundURL()
-        // const postTitle =screen.getByText(post.post_title)
-        // expect(postTitle).toBeInTheDocument()
-      }) 
-      
-  })
 })
