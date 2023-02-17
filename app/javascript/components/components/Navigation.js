@@ -1,6 +1,7 @@
 import React from 'react'
 import { Button, Nav, NavItem } from 'reactstrap'
 import { NavLink } from 'react-router-dom'
+import brainbusterslogo from "../assets/brainbusterslogo.png"
 
 const Navigation = ({
     logged_in,
@@ -13,20 +14,15 @@ const Navigation = ({
     return (
         <>
             <Nav>
-                {logged_in && (
-                <>
                     <NavItem>
                         <NavLink to="/" className="nav-link">
-                            <Button>Home</Button>
+                        <img
+                            src={brainbusterslogo}
+                            alt="BrainBusters Logo"
+                            className="bb-logo"
+                        />
                         </NavLink>
                     </NavItem>
-                    <NavItem>
-                        <a href={sign_out_route} className="nav-link">
-                        <Button>Sign Out</Button>
-                        </a>
-                    </NavItem>
-                </>
-                )}
                 {logged_in && (
                 <>
                     <NavItem>
@@ -43,6 +39,11 @@ const Navigation = ({
                         <NavLink to="/postnew" className="nav-link">
                             <Button>Create Post</Button>
                         </NavLink>
+                    </NavItem>
+                    <NavItem>
+                        <a href={sign_out_route} className="nav-link">
+                        <Button>Sign Out</Button>
+                        </a>
                     </NavItem>
                 </>
                 )}

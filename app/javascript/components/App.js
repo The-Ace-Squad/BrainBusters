@@ -7,6 +7,7 @@ import Home from "./pages/Home"
 import PostEdit from "./pages/PostEdit"
 import PostNew from "./pages/PostNew"
 import NotFound from "./pages/NotFound"
+import Header from "./components/Header"
 
 
 const App = (props) => {
@@ -28,8 +29,9 @@ const App = (props) => {
 
   return (
     <>
-      <h1>BrainBusters App</h1>
+      
       <BrowserRouter>
+      < Header { ...props } />
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/postindex" element={<PostIndex posts={posts}/>} />
