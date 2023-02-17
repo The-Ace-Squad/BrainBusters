@@ -84,7 +84,9 @@ RSpec.describe "Posts", type: :request do
 
       delete "/posts/#{post.id}"
 
+      posts = JSON.parse(response.body)
       expect(response).to have_http_status(200)
+      expect(posts.length).to eq 0
     end
   end   
 end
