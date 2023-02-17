@@ -65,5 +65,28 @@ RSpec.describe "Posts", type: :request do
       expect(response).to have_http_status(200)
       expect(post3.post_title).to eq("Notes on arrays")
     end   
-  end    
+  end
+  describe "DELETE /destroy" do
+    it "deletes a post" do
+      user = User.create(email:"test1@example.com", password:"123456", username:"exampletester")
+      post_params= {
+        post: {
+          user_id: user.id,
+          post_title: "Notes on Conditionals",
+          post_content: "Please share some notes on conditionals",
+          category_tag: "Notes",
+          create_date: "16-02-2023",
+        }
+      }
+
+      post '/posts', params: post_params
+      post = Post.first
+
+      delete "/posts/#{post.id}"
+
+      posts = JSON.parse(response.body)
+      expect(response).to have_http_status(200)
+      expect(posts.length).to eq 0
+    end
+  end   
 end
