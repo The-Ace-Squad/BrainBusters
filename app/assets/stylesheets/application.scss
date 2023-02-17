@@ -1,5 +1,14 @@
 @import "bootstrap";
 
-// .form-element{
-//   margin: 10px;
-// }
+.footer {
+    background-color:#E72076;
+    color: white;
+    height: 1.5rem;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    display: flex;
+    position: fixed;
+    bottom: 0;
+  }
+  

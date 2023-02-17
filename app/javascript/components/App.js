@@ -8,6 +8,7 @@ import PostEdit from "./pages/PostEdit"
 import PostNew from "./pages/PostNew"
 import NotFound from "./pages/NotFound"
 import Header from "./components/Header"
+import Footer from "./components/Footer"
 
 
 const App = (props) => {
@@ -41,6 +42,7 @@ const App = (props) => {
         <Route path="/mypost" element={<MyPost />} />
         <Route path="/*" element={<NotFound />} />
       </Routes>
+      <Footer/>
     </BrowserRouter>
     </>
   )
