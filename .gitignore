@@ -18,12 +18,14 @@
 !/tmp/pids/
 !/tmp/pids/.keep
 
+
 # Ignore uploaded files in development.
 /storage/*
 !/storage/.keep
 /tmp/storage/*
 !/tmp/storage/
 !/tmp/storage/.keep
+/coverage
 
 /public/assets
 

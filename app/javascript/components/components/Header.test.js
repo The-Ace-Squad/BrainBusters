@@ -4,6 +4,7 @@ import Header from "./Header"
 import { BrowserRouter } from "react-router-dom"
 import userEvent from "@testing-library/user-event"
 
+
 describe("<Header />", () => {
     it("renders without crashing", () => {
         const div = document.createElement("div")
@@ -33,13 +34,10 @@ describe("<Header />", () => {
                 <Header />
             </BrowserRouter>
         )
-        userEvent.click(screen.getByText("View All Posts"))
-        expect(screen.getByText("View All Posts")).toBeInTheDocument()
-        userEvent.click(screen.getByText("My Posts"))
-        expect(screen.getByText("My Posts")).toBeInTheDocument()
-        userEvent.click(screen.getByText("Create Post"))
-        expect(screen.getByText("Create Post")).toBeInTheDocument()
-        userEvent.click(screen.getByText("Sign Out"))
-        expect(screen.getByText("Sign Out")).toBeInTheDocument()
+        userEvent.click(screen.getByText("Sign In"))
+        expect(screen.getByText("Sign In")).toBeInTheDocument()
+        userEvent.click(screen.getByText("Sign Up"))
+        expect(screen.getByText("Sign Up")).toBeInTheDocument()
+    
     })
 })
