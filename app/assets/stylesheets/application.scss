@@ -18,7 +18,8 @@ body {
   }
 .nav-button {
   background-color: #E72076;
-  color: white
+  color: white;
+  
 
 }  
 
@@ -32,4 +33,31 @@ body {
 .card-title {
   color: #0099D6;
 }
+
+.postshow-title {
+  color: #6EAE3C;
+  width: 80%;
+  text-align: center;
   
+
+}
+
+.postshow-cat {
+  color: #C6A800;
+  width: 80%;
+  text-align: center;
+  
+
+}
+
+.postshow-content {
+  color: white;
+  width: 100%;
+  text-align: left;
+  display: flex;
+  justify-content: center;
+  padding-left: 200px;
+  padding-right: 400px;
+  
+ 
+}

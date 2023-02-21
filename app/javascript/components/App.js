@@ -36,7 +36,7 @@ const App = (props) => {
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/postindex" element={<PostIndex posts={posts}/>} />
-        <Route path="/postshow/:id" element={<PostShow />} />
+        <Route path="/postshow/:id" element={<PostShow posts = {posts} currentUser = {props.current_user} />} />
         <Route path="/postnew" element={<PostNew />} />
         <Route path="/postedit" element={<PostEdit />} />
         <Route path="/mypost" element={<MyPost />} />

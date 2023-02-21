@@ -1,12 +1,31 @@
 import React from "react"
+import { useParams } from "react-router-dom"
 
-const PostShow = () => {
-
+const PostShow = ({ posts, currentUser }) => {
+  const { id } = useParams()
+  const currentPost = posts?.find((post) => post.id === +id)
+  console.log(id)
+  console.log("currentpost", currentPost)
   return (
+    
     <>
-      <h1>This is the PostShow</h1>
-    </>
-  )
+      {currentPost && (
+          <div className="post-info">
+            <div className="postshow-title">
+              <h1>{currentPost.post_title}</h1>
+            </div>
+            <div className="postshow-cat">
+              <h2>{currentPost.category_tag}</h2>
+            </div>
+            <div className="postshow-content" >
+              <p>{currentPost.post_content}</p>
+            </div> 
+          </div> 
+      )}
+    
+      </>  
+  )  
+
 }
 
 export default PostShow
