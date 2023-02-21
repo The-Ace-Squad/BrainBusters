@@ -27,22 +27,22 @@ const Navigation = ({
                 <>
                     <NavItem>
                         <NavLink to="/postindex" className="nav-link">
-                            <Button>View All Posts</Button>
+                            <Button className='nav-button'>View All Posts</Button>
                         </NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLink to="/myposts" className="nav-link">
-                            <Button>My Posts</Button>
+                        <NavLink to="/mypost" className="nav-link">
+                            <Button className='nav-button'>My Posts</Button>
                         </NavLink>
                     </NavItem>
                     <NavItem>
                         <NavLink to="/postnew" className="nav-link">
-                            <Button>Create Post</Button>
+                            <Button className='nav-button'>Create Post</Button>
                         </NavLink>
                     </NavItem>
                     <NavItem>
                         <a href={sign_out_route} className="nav-link">
-                        <Button>Sign Out</Button>
+                        <Button className='nav-button'>Sign Out</Button>
                         </a>
                     </NavItem>
                 </>
@@ -50,14 +50,14 @@ const Navigation = ({
                 {!logged_in && (
                 <NavItem>
                     <a href={sign_in_route} className="nav-link">
-                    <Button>Sign In</Button>
+                    <Button className='nav-button'>Sign In</Button>
                     </a>
                 </NavItem>
                 )}
                 {!logged_in && (
                 <NavItem>
                     <a href={new_user_route} className="nav-link">
-                    <Button>Sign Up</Button>
+                    <Button className='nav-button'>Sign Up</Button>
                     </a>
                 </NavItem>
                 )}
