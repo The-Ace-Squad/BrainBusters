@@ -28,6 +28,18 @@ const App = (props) => {
       .catch((error) => console.log(error))
   }
 
+  const createPost = (newPost) => {
+    fetch("/posts", {
+      body: JSON.stringify(newPost),
+      headers: {
+        "Content-Type": "application/json"
+      },
+      method: "POST"
+    })
+      .then((response) => response.json())
+      .then((payload) => readPost())
+      .catch((errors) => console.log("Create post errors:", errors))
+  }
   return (
     <>
       
@@ -37,7 +49,7 @@ const App = (props) => {
         <Route exact path="/" element={<Home />} />
         <Route path="/postindex" element={<PostIndex posts={posts}/>} />
         <Route path="/postshow/:id" element={<PostShow />} />
-        <Route path="/postnew" element={<PostNew />} />
+        <Route path="/postnew" element={<PostNew createPost={createPost} currentUser={props.current_user}/>} />
         <Route path="/postedit" element={<PostEdit />} />
         <Route path="/mypost" element={<MyPost />} />
         <Route path="/*" element={<NotFound />} />
