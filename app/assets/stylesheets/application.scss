@@ -1,4 +1,9 @@
 @import "bootstrap";
+ 
+body {
+  background-color: black;
+  color: white;
+}
 
 .footer {
     background-color:#E72076;
@@ -11,4 +16,20 @@
     position: fixed;
     bottom: 0;
   }
+.nav-button {
+  background-color: #E72076;
+  color: white
+
+}  
+
+.view-post-button {
+  background-color: #0099D6;
+  color: white
+}
+.post-text {
+  color:  #0099D6;
+}
+.card-title {
+  color: #0099D6;
+}
   

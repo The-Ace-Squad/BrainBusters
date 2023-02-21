@@ -11,13 +11,13 @@ const PostIndex = ({posts}) => {
           <Row key = {index}>
             <Col sm="6">
               <Card>
-                <CardTitle tag="h5">
+                <CardTitle className="card-title" tag="h5">
                   {post.post_title}
                 </CardTitle>
-                <CardText>
+                <CardText className="post-text">
                   {post.category_tag}
                 </CardText>
-                <Button>
+                <Button className=" view-post-button">
                   <NavLink to={`/postshow/${post.id}`} className="nav-link">
                     View Post
                   </NavLink>
