@@ -76,7 +76,7 @@ const App = (props) => {
         <Route path="/postindex" element={<PostIndex posts={posts}/>} />
         <Route path="/postshow/:id" element={<PostShow posts={posts} />} />
         <Route path="/postnew" element={<PostNew createPost={createPost} currentUser={props.current_user}/>} />
-        <Route path="/postedit" element={<PostEdit posts={posts} updatePost={updatePost} />} />
+        <Route path="/postedit/:id" element={<PostEdit posts={posts} updatePost={updatePost} />} />
         <Route path="/mypost" element={<MyPost posts={posts} currentUser={props.current_user} deletePost={deletePost}/>} />
         <Route path="/*" element={<NotFound />} />
       </Routes>
