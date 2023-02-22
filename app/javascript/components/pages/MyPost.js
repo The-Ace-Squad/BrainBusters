@@ -34,11 +34,11 @@ const MyPost = ({ posts, currentUser, deletePost }) => {
               width="100%"
             />
             <CardBody>
-              <NavLink to={`/postedit/${post.id}`}>
-                <Button>
+              <Button>
+                <NavLink to={`/postedit/${post.id}`}>
                   Edit Post
-                </Button>
-              </NavLink>
+                </NavLink>
+              </Button>
               <Button onClick = {() => {deletePost(post.id)}}>
                 Delete Post
               </Button>
