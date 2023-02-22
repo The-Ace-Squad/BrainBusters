@@ -23,6 +23,7 @@ describe("<Header />", () => {
             </BrowserRouter>,
             div
         )
+        screen.logTestingPlaygroundURL()
         const logo = screen.getByRole("img")
         expect(logo).toHaveAttribute("src", "brainbusterslogo.png")
         expect(logo).toHaveAttribute("alt", "BrainBusters Logo")
