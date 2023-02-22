@@ -14,9 +14,12 @@ import Footer from "./components/Footer"
 const App = (props) => {
 
   const [posts, setPosts]= useState([])
+  const [comments, setComments]= useState([])
+
 
   useEffect(() => {
     readPost()
+    readComments()
   }, [])
 
   const readPost = () => {
@@ -24,6 +27,14 @@ const App = (props) => {
       .then((response) => response.json())
       .then((payload) => {
         setPosts(payload)
+      })
+      .catch((error) => console.log(error))
+  }
+  const readComments = () => {
+    fetch("/comments")
+      .then((response) => response.json())
+      .then((payload) => {
+        setComments(payload)
       })
       .catch((error) => console.log(error))
   }
@@ -74,7 +85,7 @@ const App = (props) => {
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/postindex" element={<PostIndex posts={posts}/>} />
-        <Route path="/postshow/:id" element={<PostShow posts={posts} />} />
+        <Route path="/postshow/:id" element={<PostShow posts={posts} comments={comments} />} />
         <Route path="/postnew" element={<PostNew createPost={createPost} currentUser={props.current_user}/>} />
         <Route path="/postedit" element={<PostEdit posts={posts} updatePost={updatePost} />} />
         <Route path="/mypost" element={<MyPost posts={posts} currentUser={props.current_user} deletePost={deletePost}/>} />
