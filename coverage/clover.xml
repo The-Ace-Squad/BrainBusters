@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1676677916590" clover="3.2.0">
-  <project timestamp="1676677916590" name="All files">
-    <metrics statements="22" coveredstatements="22" conditionals="6" coveredconditionals="5" methods="11" coveredmethods="11" elements="39" coveredelements="38" complexity="0" loc="22" ncloc="22" packages="3" files="11" classes="11"/>
+<coverage generated="1677022329195" clover="3.2.0">
+  <project timestamp="1677022329195" name="All files">
+    <metrics statements="26" coveredstatements="26" conditionals="8" coveredconditionals="7" methods="12" coveredmethods="12" elements="46" coveredelements="45" complexity="0" loc="26" ncloc="26" packages="3" files="11" classes="11"/>
     <package name="components">
       <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="mockPosts.js" path="/Users/learnacademy/Desktop/BrainBusters/app/javascript/components/mockPosts.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
+        <line num="1" count="2" type="stmt"/>
       </file>
     </package>
     <package name="components.components">
@@ -28,7 +28,7 @@
       </file>
     </package>
     <package name="components.pages">
-      <metrics statements="15" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="8"/>
+      <metrics statements="19" coveredstatements="19" conditionals="2" coveredconditionals="2" methods="9" coveredmethods="9"/>
       <file name="Home.js" path="/Users/learnacademy/Desktop/BrainBusters/app/javascript/components/pages/Home.js">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="3" count="1" type="stmt"/>
@@ -61,9 +61,13 @@
         <line num="5" count="1" type="stmt"/>
       </file>
       <file name="PostShow.js" path="/Users/learnacademy/Desktop/BrainBusters/app/javascript/components/pages/PostShow.js">
-        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
+        <metrics statements="6" coveredstatements="6" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
+        <line num="9" count="3" type="stmt"/>
       </file>
     </package>
   </project>
