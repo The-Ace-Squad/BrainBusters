@@ -6,21 +6,6 @@ const PostShow = ({ posts, currentUser }) => {
   const { id } = useParams()
   const currentPost = posts?.find((post) => post.id === +id)
 
-  const [comments, setComments]= useState([])
-
-  useEffect(() => {
-    readComments()
-  }, [])
-  
-  const readComments = () => {
-    fetch("/comments")
-      .then((response) => response.json())
-      .then((payload) => {
-        setComments(payload)
-      })
-      .catch((error) => console.log(error))
-  }
-  console.log("comments", comments)
   return (
     
     <>
