@@ -14,12 +14,9 @@ import Footer from "./components/Footer"
 const App = (props) => {
 
   const [posts, setPosts]= useState([])
-  // const [comments, setComments]= useState([])
-
 
   useEffect(() => {
     readPost()
-    // readComments()
   }, [])
 
   const readPost = () => {
@@ -30,14 +27,6 @@ const App = (props) => {
       })
       .catch((error) => console.log(error))
   }
-  // const readComments = () => {
-  //   fetch("/comments")
-  //     .then((response) => response.json())
-  //     .then((payload) => {
-  //       setComments(payload)
-  //     })
-  //     .catch((error) => console.log(error))
-  // }
 
   const createPost = (newPost) => {
     fetch("/posts", {
@@ -107,7 +96,6 @@ const App = (props) => {
       </Routes>
       <Footer/>
     </BrowserRouter>
-      {/* <Comment createComment = {createComment} currentUser ={props.current_user} posts={posts}/> */}
     </>
   )
 }
