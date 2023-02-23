@@ -1,12 +1,12 @@
-import React from "react"
+import React, {useState, useEffect} from "react"
 import { useParams } from "react-router-dom"
+import Comments from "../components/Comments"
 
-const PostShow = ({ posts, comments, currentUser }) => {
+const PostShow = ({ posts, current_user }) => {
+  console.log(current_user)
   const { id } = useParams()
   const currentPost = posts?.find((post) => post.id === +id)
-  console.log(id)
-  console.log("currentpost", currentPost)
-  console.log("comments", comments)
+
   return (
     
     <>
@@ -21,6 +21,7 @@ const PostShow = ({ posts, comments, currentUser }) => {
             <div className="postshow-content" >
               <p>{currentPost.post_content}</p>
             </div> 
+            <Comments currentUser={current_user} currentPost={currentPost}/>
           </div> 
       )}
     

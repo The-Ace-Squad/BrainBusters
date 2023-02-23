@@ -15,12 +15,9 @@ import AboutUs from "./pages/AboutUs"
 const App = (props) => {
 
   const [posts, setPosts]= useState([])
-  const [comments, setComments]= useState([])
-
 
   useEffect(() => {
     readPost()
-    readComments()
   }, [])
 
   const readPost = () => {
@@ -28,14 +25,6 @@ const App = (props) => {
       .then((response) => response.json())
       .then((payload) => {
         setPosts(payload)
-      })
-      .catch((error) => console.log(error))
-  }
-  const readComments = () => {
-    fetch("/comments")
-      .then((response) => response.json())
-      .then((payload) => {
-        setComments(payload)
       })
       .catch((error) => console.log(error))
   }
@@ -52,7 +41,21 @@ const App = (props) => {
       .then((payload) => readPost())
       .catch((errors) => console.log("Create post errors:", errors))
   }
+
+  const createComment = (newComment) => {
+    fetch("/comments", {
+      body: JSON.stringify(newComment),
+      headers: {
+        "Content-Type": "application/json"
+      },
+      method: "POST"
+    })
+      .then((response) => response.json())
+      .then((payload) => readComments())
+      .catch((errors) => console.log("Create comment errors:", errors))
+  }
   
+
   const updatePost = (post, id) => {
     fetch(`/posts/${id}`, {
       body: JSON.stringify(post),
@@ -86,7 +89,7 @@ const App = (props) => {
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/postindex" element={<PostIndex posts={posts}/>} />
-        <Route path="/postshow/:id" element={<PostShow posts={posts} comments={comments} />} />
+        <Route path="/postshow/:id" element={<PostShow  { ...props } posts={posts} />} />
         <Route path="/postnew" element={<PostNew createPost={createPost} currentUser={props.current_user}/>} />
         <Route path="/postedit/:id" element={<PostEdit posts={posts} updatePost={updatePost} />} />
         <Route path="/mypost" element={<MyPost posts={posts} currentUser={props.current_user} deletePost={deletePost}/>} />
