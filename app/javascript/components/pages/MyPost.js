@@ -1,6 +1,6 @@
 import React from "react"
 import { Card, CardBody, CardTitle, CardSubtitle, Button, CardText, NavLink } from "reactstrap"
-
+import { useNavigate } from "react-router-dom"
 
 const MyPost = ({ posts, currentUser, deletePost }) => {
     const userPosts = posts?.filter((post) => {
@@ -19,7 +19,9 @@ const MyPost = ({ posts, currentUser, deletePost }) => {
           >
             <CardBody>
               <CardTitle tag="h5">
+                <a href={`/postshow/${post.id}`}>
                 {post.post_title} 
+                </a>
               </CardTitle>
             <CardSubtitle
               className="mb-2 text-muted"
@@ -34,10 +36,8 @@ const MyPost = ({ posts, currentUser, deletePost }) => {
               width="100%"
             />
             <CardBody>
-              <Button>
-                <NavLink to={`/postedit/${post.id}`}>
+              <Button href={`/postedit/${post.id}`}>
                   Edit Post
-                </NavLink>
               </Button>
               <Button onClick = {() => {deletePost(post.id)}}>
                 Delete Post
