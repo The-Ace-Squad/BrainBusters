@@ -1,11 +1,25 @@
-import React from "react"
+import React, {useState, useEffect} from "react"
 import { useParams } from "react-router-dom"
+import Comments from "../components/Comments"
 
-const PostShow = ({ posts, comments, currentUser }) => {
+const PostShow = ({ posts, currentUser }) => {
   const { id } = useParams()
   const currentPost = posts?.find((post) => post.id === +id)
-  console.log(id)
-  console.log("currentpost", currentPost)
+
+  const [comments, setComments]= useState([])
+
+  useEffect(() => {
+    readComments()
+  }, [])
+  
+  const readComments = () => {
+    fetch("/comments")
+      .then((response) => response.json())
+      .then((payload) => {
+        setComments(payload)
+      })
+      .catch((error) => console.log(error))
+  }
   console.log("comments", comments)
   return (
     
@@ -21,6 +35,7 @@ const PostShow = ({ posts, comments, currentUser }) => {
             <div className="postshow-content" >
               <p>{currentPost.post_content}</p>
             </div> 
+            <Comments/>
           </div> 
       )}
     
