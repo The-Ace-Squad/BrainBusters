@@ -1,11 +1,12 @@
 import React from "react"
 import { useParams } from "react-router-dom"
 
-const PostShow = ({ posts, currentUser }) => {
+const PostShow = ({ posts, comments, currentUser }) => {
   const { id } = useParams()
   const currentPost = posts?.find((post) => post.id === +id)
   console.log(id)
   console.log("currentpost", currentPost)
+  console.log("comments", comments)
   return (
     
     <>
