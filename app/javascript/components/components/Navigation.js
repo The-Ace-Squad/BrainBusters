@@ -22,6 +22,7 @@ const Navigation = ({
                             className="bb-logo"
                         />
                         </NavLink>
+                        
                     </NavItem>
                 {logged_in && (
                 <>
@@ -52,7 +53,11 @@ const Navigation = ({
                     <a href={sign_in_route} className="nav-link">
                     <Button className='nav-button'>Sign In</Button>
                     </a>
+                    <NavLink to="/aboutus" className="nav-link">
+                            <Button className='nav-button'>About Us</Button>
+                    </NavLink>
                 </NavItem>
+                
                 )}
                 {!logged_in && (
                 <NavItem>
@@ -61,6 +66,11 @@ const Navigation = ({
                     </a>
                 </NavItem>
                 )}
+                <NavItem>
+                    <NavLink to="/aboutus" className="nav-link">
+                            <Button className='nav-button'>About Us</Button>
+                    </NavLink>
+                </NavItem>
             </Nav>
         </>
     )

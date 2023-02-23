@@ -9,6 +9,7 @@ import PostNew from "./pages/PostNew"
 import NotFound from "./pages/NotFound"
 import Header from "./components/Header"
 import Footer from "./components/Footer"
+import AboutUs from "./pages/AboutUs"
 
 
 const App = (props) => {
@@ -89,6 +90,7 @@ const App = (props) => {
         <Route path="/postnew" element={<PostNew createPost={createPost} currentUser={props.current_user}/>} />
         <Route path="/postedit/:id" element={<PostEdit posts={posts} updatePost={updatePost} />} />
         <Route path="/mypost" element={<MyPost posts={posts} currentUser={props.current_user} deletePost={deletePost}/>} />
+        <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/*" element={<NotFound />} />
       </Routes>
       <Footer/>
