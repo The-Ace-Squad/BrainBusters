@@ -2,7 +2,8 @@ import React, {useState, useEffect} from "react"
 import { useParams } from "react-router-dom"
 import Comments from "../components/Comments"
 
-const PostShow = ({ posts, currentUser }) => {
+const PostShow = ({ posts, current_user }) => {
+  console.log(current_user)
   const { id } = useParams()
   const currentPost = posts?.find((post) => post.id === +id)
 
@@ -20,7 +21,7 @@ const PostShow = ({ posts, currentUser }) => {
             <div className="postshow-content" >
               <p>{currentPost.post_content}</p>
             </div> 
-            <Comments/>
+            <Comments currentUser={current_user} currentPost={currentPost}/>
           </div> 
       )}
     
