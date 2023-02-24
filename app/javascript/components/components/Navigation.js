@@ -13,8 +13,8 @@ const Navigation = ({
 
     return (
         <>
-            <Nav>
-                    <NavItem>
+            <Nav className='nav'>
+                    <NavItem className='nav-item'>
                         <NavLink to="/" className="nav-link">
                         <img
                             src={brainbusterslogo}
@@ -26,22 +26,23 @@ const Navigation = ({
                     </NavItem>
                 {logged_in && (
                 <>
-                    <NavItem>
+                    
+                    <NavItem className='nav-item'>
                         <NavLink to="/postindex" className="nav-link">
                             <Button className='nav-button'>View All Posts</Button>
                         </NavLink>
                     </NavItem>
-                    <NavItem>
+                    <NavItem className='nav-item'>
                         <NavLink to="/mypost" className="nav-link">
                             <Button className='nav-button'>My Posts</Button>
                         </NavLink>
                     </NavItem>
-                    <NavItem>
+                    <NavItem className='nav-item'>
                         <NavLink to="/postnew" className="nav-link">
                             <Button className='nav-button'>Create Post</Button>
                         </NavLink>
                     </NavItem>
-                    <NavItem>
+                    <NavItem className='nav-item'>
                         <a href={sign_out_route} className="nav-link">
                         <Button className='nav-button'>Sign Out</Button>
                         </a>
@@ -49,24 +50,22 @@ const Navigation = ({
                 </>
                 )}
                 {!logged_in && (
-                <NavItem>
+                <NavItem className='nav-item'>
                     <a href={sign_in_route} className="nav-link">
                     <Button className='nav-button'>Sign In</Button>
                     </a>
-                    <NavLink to="/aboutus" className="nav-link">
-                            <Button className='nav-button'>About Us</Button>
-                    </NavLink>
+                    
                 </NavItem>
                 
                 )}
                 {!logged_in && (
-                <NavItem>
+                <NavItem className='nav-item'>
                     <a href={new_user_route} className="nav-link">
                     <Button className='nav-button'>Sign Up</Button>
                     </a>
                 </NavItem>
                 )}
-                <NavItem>
+                <NavItem className='nav-item'>
                     <NavLink to="/aboutus" className="nav-link">
                             <Button className='nav-button'>About Us</Button>
                     </NavLink>

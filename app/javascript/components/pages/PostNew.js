@@ -23,8 +23,8 @@ const PostNew = ({createPost, currentUser}) => {
   }
   return (
     <>
-        <h1>Create New Post</h1>
-        <Form>
+        <h2 className="create-heading">Create New Post</h2>
+        <Form className="create-form">
         <FormGroup row>
           <Label
             for="post_title"
@@ -141,7 +141,7 @@ const PostNew = ({createPost, currentUser}) => {
                 size: 10
               }}
             >
-              <Button onClick = {handleSubmit}>
+              <Button onClick = {handleSubmit} className = "submit-button">
                 Submit Post
               </Button>
             </Col>

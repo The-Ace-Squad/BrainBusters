@@ -28,8 +28,8 @@ const PostEdit = ({ posts, updatePost }) => {
 
   return (
     <>
-        <h1>Edit Post</h1>
-        <Form>
+        <h2 className="editpost-heading">Edit Post</h2>
+        <Form className="editpost-form">
         <FormGroup row>
           <Label
             for="post_title"
@@ -149,8 +149,8 @@ const PostEdit = ({ posts, updatePost }) => {
                 size: 10
               }}
             >
-              <Button onClick = {handleSubmit}>
-                Submit Updated Post
+              <Button onClick = {handleSubmit} className = "submitupdate-button">
+                Update Post
               </Button>
             </Col>
           </FormGroup>

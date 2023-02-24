@@ -7,46 +7,46 @@ const MyPost = ({ posts, currentUser, deletePost }) => {
         return post.user_id === currentUser.id
     })
   return (
-    <main className="post-index-cards">
-      <h1>My Posts:</h1>
-      {userPosts?.map((post, index) =>{
-        return (
-          <Card 
-            style={{
-            width: '18rem'
-            }}
-            key = {index}
-          >
-            <CardBody>
-              <CardTitle tag="h5">
-                <a href={`/postshow/${post.id}`}>
-                {post.post_title} 
-                </a>
-              </CardTitle>
-            <CardSubtitle
-              className="mb-2 text-muted"
-              tag="h6"
+    <>
+      <h2 className="mypost-heading">My Posts</h2>
+      <main className="mypost-cards">
+        {userPosts?.map((post, index) =>{
+          const colors = ["#00A6DE", "#6EAE3C", "#DC8D2B", "#C90885", "#832688", "#C6A800"]; 
+          const color = colors[index % colors.length]; 
+          return (
+            <Card className="mypost-card" 
+              style={{
+              width: '18rem',
+              backgroundColor: color
+              }}
+              key = {index}
             >
-            {post.category_tag}
-            </CardSubtitle>
-            </CardBody>
-            <img
-              alt={`Picture of ${post.post_title}`}
-              src={post.share_file}
-              width="100%"
-            />
-            <CardBody>
-              <Button href={`/postedit/${post.id}`}>
-                  Edit Post
-              </Button>
-              <Button onClick = {() => {deletePost(post.id)}}>
-                Delete Post
-              </Button>
-            </CardBody>
-          </Card>
-        )
-      })}
-    </main>
+              <CardBody className = "card-body">
+                <CardTitle tag="h5" className="mypost-cardtitle">
+                  <a className = "post-link" href={`/postshow/${post.id}`}>
+                  {post.post_title} 
+                  </a>
+                </CardTitle>
+              <CardSubtitle
+                className="mypost-subheading"
+                tag="h6"
+              >
+              {post.category_tag}
+              </CardSubtitle>
+              </CardBody>
+              <CardBody>
+                <Button href={`/postedit/${post.id}`} className = "edit-button">
+                    Edit Post
+                </Button>
+                <Button onClick = {() => {deletePost(post.id)}} className = "delete-button">
+                  Delete Post
+                </Button>
+              </CardBody>
+            </Card>
+          )
+        })}
+      </main>
+    </>
   )
 }
 
