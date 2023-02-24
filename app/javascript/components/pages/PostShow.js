@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react"
 import { useParams } from "react-router-dom"
+import AddComment from "../components/AddComment"
 import Comments from "../components/Comments"
 
 const PostShow = ({ posts, current_user }) => {
@@ -22,6 +23,7 @@ const PostShow = ({ posts, current_user }) => {
               <p>{currentPost.post_content}</p>
             </div> 
             <Comments currentUser={current_user} currentPost={currentPost}/>
+            <AddComment currentUser={current_user} currentPost={currentPost}/>
           </div> 
       )}
     
