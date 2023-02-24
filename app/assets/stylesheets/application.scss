@@ -6,107 +6,262 @@ body {
 }
 
 .footer {
-    background-color:#E72076;
-    color: white;
-    height: 1.5rem;
-    width: 100%;
-    flex-direction: row;
-    justify-content: space-around;
-    display: flex;
-    position: fixed;
-    bottom: 0;
-  }
+  background-color:#E72076;
+  color: white;
+  height: 1.5rem;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-around;
+  display: flex;
+  position: fixed;
+  bottom: 0;
+}
 .nav-button {
   background-color: #E72076;
   color: white; 
-}  
+  margin-top: 15px;
+}
+
+// Index page styling
+
+.index-post-head {
+text-align: center;
+color: white;
+}
+.post-index-card {
+  padding: 15px;
+  margin-bottom: 30px;
+  margin-left: 30px;
+  margin-right: 15px;
+  margin-top: 15px;
+  height: 200px;
+  width: 300px; 
+}
+
+.card-group {
+  display:inline-flex;
+  margin-top: 20px;
+}
 
 .view-post-button {
-  background-color: #0099D6;
-  color: white
-}
-.post-text {
-  color:  #0099D6;
-}
+  background-color: lightgray;
+  color: white;
+  border: none;
+  bottom: 10%;
+  width: 262px;
+  position: absolute;
+  bottom: 10;
+  display: flex;
+  justify-content: center;
+ }
+ 
 .card-title {
-  color: #0099D6;
+  color:white;
 }
 
+// Not found Page styling
+
 .notfound{
-  height: 85%;
-  width:85%;
-  display: flex;
-  padding-left: 350px;
+  height: 90%;
+  width: 90%;
+  padding-left: 300px;
   padding-right: 200px;
-  
+  align-content: center;
+  margin-top: 20px;
 }  
+
+.post-info {
+  text-align: center;
+  background-size: contain;
+  margin-top: 20px;
+  margin-left: 70px; 
+  
+  
+}
 
 .postshow-title {
   color: #6EAE3C;
   width: 80%;
   text-align: center;
-  
-
+  margin-left: 90px;
 }
 
 .postshow-cat {
   color: #C6A800;
   width: 80%;
+  margin-left: 80px;
   text-align: center;
-  
-
 }
 
 .postshow-content {
-  color: white;
-  width: 100%;
-  text-align: left;
-  display: flex;
-  justify-content: center;
-  padding-left: 200px;
-  padding-right: 400px;
-  
+  color: black;
+  background-color: white;
+  background-size: contain;
+  width: 80%;
+  text-align:justify;
+  padding-left: 20px;
+  padding-right:20px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  margin-left: 90px; 
 }
 
-.about-heading {
- text-align: center;
+// about us page styling
 
+.about-heading {
+  text-align: center;
 }
 
 .about-matt {
-border: 20px solid black;
-padding: 50px;
-background-color: #C38612;
-color: white;
-align-items: center;
-height: 80% ;
-width: 80%;
-margin: auto;
+  border: 20px solid black;
+  padding: 50px;
+  background-color: #C38612;
+  color: white;
+  align-items: center;
+  height: 80% ;
+  width: 80%;
+  margin: auto;
 }
 
 .about-natally {
-border: 20px solid black;
-padding: 50px;
-background-color: #E72076;
-height: 80% ;
-width: 80%;
-margin: auto;
+  border: 20px solid black;
+  padding: 50px;
+  background-color: #E72076;
+  height: 80% ;
+  width: 80%;
+  margin: auto;
 }
 
 .about-romeo {
-border: 20px solid black;
-padding: 50px;
-background-color: #6EAE3C;
-height: 80% ;
-width: 80%;
-margin: auto;
+  border: 20px solid black;
+  padding: 50px;
+  background-color: #6EAE3C;
+  height: 80% ;
+  width: 80%;
+  margin: auto;
 }
 
 .about-awhit {
-border: 20px solid black;
-padding: 50px;
-background-color: #0099D6;
-height: 80% ;
-width: 80%;
-margin: auto;
+  border: 20px solid black;
+  padding: 50px;
+  background-color: #0099D6;
+  height: 80% ;
+  width: 80%;
+  margin: auto;
 }
+
+// Create page styling
+
+.create-form {
+  background-color:white;
+  color:black;
+  width: 80%;
+  margin: 0 auto;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  justify-content: center;
+  border: none;
+  border-radius: 10px;
+}
+
+.submit-button {
+  background-color:#0099D6;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  margin-left: 30%;
+}
+
+.create-heading {
+  text-align: center;
+  margin: 20px;
+}
+
+// My post page styling
+
+.mypost-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.mypost-card{
+  padding: 15px;
+  margin: 25px;
+  height: 200px;
+  width: 300px  
+}
+
+.card-body{
+ padding-top: 0%;
+
+}
+
+.mypost-cardtitle {
+  text-align: left;
+  margin-top: none;
+}
+
+.post-link {
+  color: whitesmoke;
+  text-decoration: none;
+}
+.delete-button {
+  background-color: lightgray;
+  background-size:cover;
+  border: none;
+  bottom: 10;
+  margin-left: 120px;
+  position: absolute;
+  bottom: 5%;
+}
+
+.edit-button {
+  background-color: lightgray;
+  background-size:cover;
+  border: none;
+  bottom: 10;
+  justify-content: left;
+  position: absolute;
+  bottom: 5%;
+}
+
+.mypost-heading {
+  margin: 20px;
+}
+
+.mypost-subheading {
+  color: white;
+}
+
+
+.editpost-form {
+  background-color:white;
+  color:black;
+  width: 80%;
+  margin: 0 auto;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  justify-content: center;
+  border: none;
+  border-radius: 10px;
+}
+
+// Update page styling
+
+.submitupdate-button {
+  background-color:#0099D6;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  margin-left: 25%;
+}
+
+.editpost-heading {
+  margin: 20px;
+  text-align: center;
+}
+

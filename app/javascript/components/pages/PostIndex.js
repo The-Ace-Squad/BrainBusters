@@ -1,16 +1,18 @@
 import React from "react"
-import { Row, Col, Card , CardTitle, CardText, Button } from "reactstrap"
+import { Card , CardTitle, CardText, Button, CardGroup } from "reactstrap"
 import { NavLink } from "react-router-dom"
 
 const PostIndex = ({posts}) => {
   return (
     <main className="post-index-cards">
-      <h2>All Posts</h2>
+      <h2 className="index-post-head">All Posts</h2>
       {posts?.map((post, index)=>{
+         const colors = ["#00A6DE", "#6EAE3C", "#DC8D2B", "#C90885", "#832688", "#C6A800"]; 
+         const color = colors[index % colors.length]; 
         return (
-          <Row key = {index}>
-            <Col sm="6">
-              <Card>
+           
+            <CardGroup className="card-group">
+              <Card className = "post-index-card" style={{backgroundColor: color}}>
                 <CardTitle className="card-title" tag="h5">
                   {post.post_title}
                 </CardTitle>
@@ -23,8 +25,8 @@ const PostIndex = ({posts}) => {
                   </NavLink>
                 </Button>
               </Card>
-            </Col>
-          </Row>
+            </CardGroup>
+          
         )
       })}
     </main>
