@@ -4,7 +4,6 @@ import AddComment from "../components/AddComment"
 import Comments from "../components/Comments"
 
 const PostShow = ({ posts, current_user }) => {
-  console.log(current_user)
   const { id } = useParams()
   const currentPost = posts?.find((post) => post.id === +id)
 
@@ -22,8 +21,8 @@ const PostShow = ({ posts, current_user }) => {
             <div className="postshow-content" >
               <p>{currentPost.post_content}</p>
             </div> 
-            <Comments currentUser={current_user} currentPost={currentPost}/>
             <AddComment currentUser={current_user} currentPost={currentPost}/>
+            <Comments currentUser={current_user} currentPost={currentPost}/>
           </div> 
       )}
     
