@@ -1,5 +1,6 @@
-import React, { useState } from "react"
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import React, { useState, useEffect } from "react"
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Input } from 'reactstrap';
+import { Navigate, useNavigate } from "react-router-dom";
 
 
 
@@ -7,44 +8,58 @@ const AddComment = ({currentUser, currentPost}) => {
 
 	const [newComment, setNewComment] = useState({
 		content: "",
-		post_id: currentPost.id, 
+		post_id: currentPost.id,
 		user_id: currentUser.id,
 		vote_count: 0
 	})
 
-	const handleChange = (e) => {
-		setNewComment({...newComment, [e.target.name]: e>target.value})
-	}
+	const [modalToggle, setModalToggle] = useState(false)
 
 	const createComment = (newComment) => {
 		fetch("/comments", {
 			body: JSON.stringify(newComment),
 			headers: {
-			"Content-Type": "application/json"
+				"Content-Type": "application/json"
 			},
 			method: "POST"
 		})
-			.then((response) => response.json())
-			.then((payload) => readComments())
-			.catch((errors) => console.log("Create comment errors:", errors))
-			}
+		.then((response) => response.json())
+		.then((payload) => console.log())
+		.catch((errors) => console.log("Create comment errors:", errors))
+	}
+
+	const navigate = useNavigate()
 
 	const handleSubmit = () => {
 		createComment(newComment)
+		navigate(`/postshow/${id}`)
+		toggle()
 	}
-
 	
+	const toggle = () => {
+		setModalToggle(!modalToggle)
+	}
+	
+	const handleChange = (e) => {
+		setNewComment({...newComment, [e.target.name]: e.target.value})
+	}
 		return (
 			<div>
-				<Button color="danger" onClick={this.toggle}>{this.props.buttonLabel}</Button>
-				<Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
-					<ModalHeader toggle={this.toggle}>Modal title</ModalHeader>
+				<Button color="danger" onClick={toggle}>Add Comment</Button>
+				<Modal isOpen={modalToggle} className="Modal">
+					<ModalHeader toggle={toggle}>Add Comment</ModalHeader>
 					<ModalBody>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					<Input
+						id="content"
+						name="content"
+						type="text"
+						onChange = {handleChange}
+						value = {newComment.content}
+						/>
 					</ModalBody>
 					<ModalFooter>
-						<Button color="primary" onClick={this.toggle}>Do Something</Button>{' '}
-						<Button color="secondary" onClick={this.toggle}>Cancel</Button>
+						<Button color="primary" onClick={handleSubmit}>Submit Comment</Button>{' '}
+						<Button color="secondary" onClick={toggle}>Cancel</Button>
 					</ModalFooter>
 				</Modal>
 		</div>

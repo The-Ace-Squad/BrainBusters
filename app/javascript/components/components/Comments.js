@@ -3,13 +3,13 @@ import { useParams } from "react-router-dom";
 import { Card, CardBody, CardTitle, CardSubtitle } from "reactstrap"
 
 
-const Comments = ({post_id, currentUser, currentPost}) => {
-  console.log(currentUser)
-  const { id } = useParams()
+const Comments = ({currentUser, currentPost}) => {
+  
   const [comments, setComments]= useState([])
+  
   useEffect(() => {
     readComments()
-  }, [])
+  }, [comments])
   
   const readComments = () => {
     fetch("/comments")
@@ -19,9 +19,10 @@ const Comments = ({post_id, currentUser, currentPost}) => {
       })
       .catch((error) => console.log(error))
   }
+  
   return(
     <main className="post-index-cards">
-      <h1>My Posts:</h1>
+      <h1>Comments:</h1>
       {comments.map((comment, index) =>{
         return (
           comment.post_id == currentPost.id &&
