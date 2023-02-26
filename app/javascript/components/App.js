@@ -10,7 +10,11 @@ import NotFound from "./pages/NotFound"
 import Header from "./components/Header"
 import Footer from "./components/Footer"
 import AboutUs from "./pages/AboutUs"
-
+import Assessments from "./pages/Assessments"
+import Blockers from "./pages/Blockers"
+import ClassNotes from "./pages/ClassNotes"
+import Code from "./pages/Code"
+import Random from "./pages/Random"
 
 const App = (props) => {
 
@@ -89,6 +93,11 @@ const App = (props) => {
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/postindex" element={<PostIndex posts={posts}/>} />
+        <Route path="/code" element={<Code posts={posts}/>} />
+        <Route path="/classnotes" element={<ClassNotes posts={posts}/>} />
+        <Route path="/blockers" element={<Blockers posts={posts}/>} />
+        <Route path="/assessments" element={<Assessments posts={posts}/>} />
+        <Route path="/random" element={<Random posts={posts}/>} />
         <Route path="/postshow/:id" element={<PostShow  { ...props } posts={posts} />} />
         <Route path="/postnew" element={<PostNew createPost={createPost} currentUser={props.current_user}/>} />
         <Route path="/postedit/:id" element={<PostEdit posts={posts} updatePost={updatePost} />} />
