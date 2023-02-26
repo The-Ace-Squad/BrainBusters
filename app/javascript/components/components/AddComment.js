@@ -10,7 +10,8 @@ const AddComment = ({currentUser, currentPost}) => {
 		content: "",
 		post_id: currentPost.id,
 		user_id: currentUser.id,
-		vote_count: 0
+		vote_count: 0,
+		username: currentUser.username
 	})
 
 	const [modalToggle, setModalToggle] = useState(false)
@@ -43,6 +44,7 @@ const AddComment = ({currentUser, currentPost}) => {
 	const handleChange = (e) => {
 		setNewComment({...newComment, [e.target.name]: e.target.value})
 	}
+
 		return (
 			<div>
 				<Button color="danger" onClick={toggle}>Add Comment</Button>
