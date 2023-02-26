@@ -29,7 +29,7 @@ const Navigation = ({
                     
                     <NavItem className='nav-item'>
                         <NavLink to="/postindex" className="nav-link">
-                            <Button className='nav-button'>View All Posts</Button>
+                            <Button className='view-button'>View All Posts</Button>
                         </NavLink>
                     </NavItem>
                     <NavItem className='nav-item'>

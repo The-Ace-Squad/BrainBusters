@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
 import { useParams } from "react-router-dom";
-import { Card, CardBody, CardTitle, CardSubtitle } from "reactstrap"
+import { Card, CardBody, CardTitle, CardSubtitle, CardGroup } from "reactstrap"
 
 
 const Comments = ({currentUser, currentPost}) => {
@@ -20,32 +20,33 @@ const Comments = ({currentUser, currentPost}) => {
   }
   
   return(
-    <main className="post-index-cards">
-      <h1>Comments:</h1>
-      {comments.map((comment, index) =>{
-        return (
-          comment.post_id == currentPost.id &&
-          <Card 
-            style={{
-            width: '18rem'
-            }}
-            key = {index}
-          >
-            <CardBody>
-              <CardTitle tag="h5">
-                {comment.content} 
-              </CardTitle>
-            <CardSubtitle
-              className="mb-2 text-muted"
-              tag="h6"
-            >
-            {comment.username}
-            </CardSubtitle>
-            </CardBody>
-          </Card>
-        )
-      })}
-    </main>
+
+    <>
+      <h3 className="comments-heading">Comments</h3>
+        <main className="comments-cards">
+          {comments.map((comment, index) =>{
+            const colors = ["#00A6DE", "#6EAE3C", "#DC8D2B", "#C90885", "#832688", "#C6A800"]; 
+            const color = colors[index % colors.length]; 
+            return (
+              comment.post_id == currentPost.id &&
+              <CardGroup className="comment-cardgroup">
+                  <Card className="comment-card" style={{backgroundColor: color}}
+                    key = {index}>
+                    <CardBody className="comment-cardbody">
+                        <CardTitle tag="h5">
+                          {comment.content} 
+                        </CardTitle>s
+                      <CardSubtitle>
+                        {comment.username}
+                      </CardSubtitle>
+                    </CardBody>
+                  </Card>
+              </CardGroup>
+            )
+          })}
+        </main>
+    </>
+
   )
 }
 export default Comments

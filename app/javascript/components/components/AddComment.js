@@ -47,7 +47,7 @@ const AddComment = ({currentUser, currentPost}) => {
 
 		return (
 			<div>
-				<Button color="danger" onClick={toggle}>Add Comment</Button>
+				<Button className="comment-button" onClick={toggle}>Add Comment</Button>
 				<Modal isOpen={modalToggle} className="Modal">
 					<ModalHeader toggle={toggle}>Add Comment</ModalHeader>
 					<ModalBody>

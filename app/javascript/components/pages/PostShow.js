@@ -12,6 +12,7 @@ const PostShow = ({ posts, current_user }) => {
     <>
       {currentPost && (
           <div className="post-info">
+
             <div className="postshow-title">
               <h1>{currentPost.post_title}</h1>
             </div>

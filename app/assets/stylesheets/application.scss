@@ -22,6 +22,13 @@ body {
   margin-top: 15px;
 }
 
+.view-button {
+  margin-left: 270px;
+  background-color: #E72076;
+  color: white; 
+  margin-top: 15px;
+}
+
 // Index page styling
 
 .index-post-head {
@@ -41,6 +48,7 @@ color: white;
 .card-group {
   display:inline-flex;
   margin-top: 20px;
+  margin-left: 10px;
 }
 
 .view-post-button {
@@ -70,27 +78,29 @@ color: white;
   margin-top: 20px;
 }  
 
+
+// Show Page styling
+
 .post-info {
-  text-align: center;
-  background-size: contain;
-  margin-top: 20px;
-  margin-left: 70px; 
-  
-  
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .postshow-title {
   color: #6EAE3C;
   width: 80%;
-  text-align: center;
-  margin-left: 90px;
+  text-align: left;
+  
 }
 
 .postshow-cat {
   color: #C6A800;
   width: 80%;
-  margin-left: 80px;
-  text-align: center;
+  text-align: left;
+  margin-bottom: 10px;
 }
 
 .postshow-content {
@@ -99,11 +109,41 @@ color: white;
   background-size: contain;
   width: 80%;
   text-align:justify;
-  padding-left: 20px;
-  padding-right:20px;
-  padding-bottom: 20px;
-  padding-top: 20px;
-  margin-left: 90px; 
+  padding: 20px;
+  display: flex;
+  align-content: center;
+}
+
+.comment-button{
+  background-color: rgb(177, 175, 175);
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+.comment-heading {
+  margin-bottom: 15px;
+}
+
+.comment-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 300px;
+  margin-right: 300px;
+  margin-bottom: 10px;
+  
+}
+
+.comments-cards {
+  display: flex;
+  align-items:center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.comment-cardgroup {
+  flex: 0 0 100%;
 }
 
 // about us page styling
