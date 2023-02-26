@@ -35,7 +35,7 @@ const Comments = ({currentUser, currentPost}) => {
                     <CardBody className="comment-cardbody">
                         <CardTitle tag="h5">
                           {comment.content} 
-                        </CardTitle>s
+                        </CardTitle>
                       <CardSubtitle>
                         {comment.username}
                       </CardSubtitle>

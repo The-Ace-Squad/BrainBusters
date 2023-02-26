@@ -12,15 +12,14 @@ const PostShow = ({ posts, current_user }) => {
     <>
       {currentPost && (
           <div className="post-info">
-
             <div className="postshow-title">
-              <h1>{currentPost.post_title}</h1>
-            </div>
-            <div className="user-name">
-              <h1>{currentPost.username}</h1>
+              <h2>{currentPost.post_title}</h2>
             </div>
             <div className="postshow-cat">
-              <h2>{currentPost.category_tag}</h2>
+              <h3>{currentPost.category_tag}</h3>
+            </div>
+            <div className="user-name">
+              <p> Created By:{currentPost.username}</p>
             </div>
             <div className="postshow-content" >
               <p>{currentPost.post_content}</p>
