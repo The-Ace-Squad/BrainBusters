@@ -5,6 +5,26 @@ body {
   color: white;
 }
 
+// Home Page
+
+.home-para {
+  border: #C38612;
+  border-radius: 10px;
+  color:#6EAE3C;
+  background-color: white;
+  font-size: larger;
+  height: 350px;
+  width: 460px;
+  padding-bottom: 60%;
+  text-align: center;
+  border: 1px solid #fff;
+  padding: 15px;
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  transform: translateY(-50%);
+}
+
 .footer {
   background-color:#E72076;
   color: white;
@@ -92,15 +112,20 @@ color: white;
 .postshow-title {
   color: #6EAE3C;
   width: 80%;
-  text-align: left;
+  text-align: center;
+  margin-top: 20px;
   
 }
 
 .postshow-cat {
   color: #C6A800;
   width: 80%;
-  text-align: left;
+  text-align: center;
   margin-bottom: 10px;
+}
+
+.user-name{
+  
 }
 
 .postshow-content {
