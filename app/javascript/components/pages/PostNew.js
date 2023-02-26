@@ -11,6 +11,7 @@ const PostNew = ({createPost, currentUser}) => {
     category_tag: "",
     create_date: "",
     share_file: "",
+    username: currentUser.username
   })
 
   const handleChange = (e) => {

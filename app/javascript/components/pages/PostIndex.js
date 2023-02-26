@@ -11,7 +11,7 @@ const PostIndex = ({posts}) => {
          const color = colors[index % colors.length]; 
         return (
            
-            <CardGroup className="card-group">
+            <CardGroup className="card-group" key = {index}>
               <Card className = "post-index-card" style={{backgroundColor: color}}>
                 <CardTitle className="card-title" tag="h5">
                   {post.post_title}

@@ -4,7 +4,6 @@ import { Card, CardBody, CardTitle, CardSubtitle, CardGroup } from "reactstrap"
 
 
 const Comments = ({currentUser, currentPost}) => {
-  
   const [comments, setComments]= useState([])
   
   useEffect(() => {
@@ -21,6 +20,7 @@ const Comments = ({currentUser, currentPost}) => {
   }
   
   return(
+
     <>
       <h3 className="comments-heading">Comments</h3>
         <main className="comments-cards">
@@ -37,7 +37,7 @@ const Comments = ({currentUser, currentPost}) => {
                           {comment.content} 
                         </CardTitle>s
                       <CardSubtitle>
-                        {currentUser.username}
+                        {comment.username}
                       </CardSubtitle>
                     </CardBody>
                   </Card>
@@ -46,6 +46,7 @@ const Comments = ({currentUser, currentPost}) => {
           })}
         </main>
     </>
+
   )
 }
 export default Comments

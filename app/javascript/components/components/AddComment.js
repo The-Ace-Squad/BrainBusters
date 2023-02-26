@@ -10,7 +10,8 @@ const AddComment = ({currentUser, currentPost}) => {
 		content: "",
 		post_id: currentPost.id,
 		user_id: currentUser.id,
-		vote_count: 0
+		vote_count: 0,
+		username: currentUser.username
 	})
 
 	const [modalToggle, setModalToggle] = useState(false)
@@ -32,17 +33,18 @@ const AddComment = ({currentUser, currentPost}) => {
 
 	const handleSubmit = () => {
 		createComment(newComment)
-		navigate(`/postshow/${id}`)
+		navigate(`/postshow/${currentPost.id}`)
 		toggle()
 	}
 	
 	const toggle = () => {
 		setModalToggle(!modalToggle)
 	}
-	
+
 	const handleChange = (e) => {
 		setNewComment({...newComment, [e.target.name]: e.target.value})
 	}
+
 		return (
 			<div>
 				<Button className="comment-button" onClick={toggle}>Add Comment</Button>
