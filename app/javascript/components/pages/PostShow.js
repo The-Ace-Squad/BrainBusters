@@ -7,6 +7,8 @@ const PostShow = ({ posts, current_user }) => {
   const { id } = useParams()
   const currentPost = posts?.find((post) => post.id === +id)
 
+  // const postUser = currentPost.user_id
+  
   return (
     
     <>
@@ -14,6 +16,9 @@ const PostShow = ({ posts, current_user }) => {
           <div className="post-info">
             <div className="postshow-title">
               <h1>{currentPost.post_title}</h1>
+            </div>
+            <div className="user-name">
+              {/* <h1>{postUser.username}</h1> */}
             </div>
             <div className="postshow-cat">
               <h2>{currentPost.category_tag}</h2>
