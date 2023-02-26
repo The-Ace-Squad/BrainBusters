@@ -34,12 +34,12 @@ const Comments = ({currentUser, currentPost}) => {
             <CardBody>
               <CardTitle tag="h5">
                 {comment.content} 
-              </CardTitle>s
+              </CardTitle>
             <CardSubtitle
               className="mb-2 text-muted"
               tag="h6"
             >
-            {currentUser.username}
+            {comment.username}
             </CardSubtitle>
             </CardBody>
           </Card>
