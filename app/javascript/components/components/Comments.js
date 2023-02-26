@@ -4,7 +4,6 @@ import { Card, CardBody, CardTitle, CardSubtitle } from "reactstrap"
 
 
 const Comments = ({currentUser, currentPost}) => {
-  
   const [comments, setComments]= useState([])
   
   useEffect(() => {

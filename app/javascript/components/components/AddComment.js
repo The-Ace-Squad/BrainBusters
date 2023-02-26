@@ -32,14 +32,14 @@ const AddComment = ({currentUser, currentPost}) => {
 
 	const handleSubmit = () => {
 		createComment(newComment)
-		navigate(`/postshow/${id}`)
+		navigate(`/postshow/${currentPost.id}`)
 		toggle()
 	}
 	
 	const toggle = () => {
 		setModalToggle(!modalToggle)
 	}
-	
+
 	const handleChange = (e) => {
 		setNewComment({...newComment, [e.target.name]: e.target.value})
 	}
