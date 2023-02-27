@@ -7,8 +7,7 @@ const AboutUs = () => {
             <h2>About Us</h2>
         </div> 
         <div className="about-matt">
-            <h3>Product Manager: Matthew Munoz</h3>
-               
+            <h3>Product Manager: Matthew Munoz</h3>    
             <p>Hey, I'm Matthew Munoz from San Diego, California. I'm a former high school teacher turned full-stack developer. When I'm not coding I enjoy playing video games, finding great restaurants, boxing, and spending time with my friends and family.</p>
         </div> 
         <div className="about-natally">    
