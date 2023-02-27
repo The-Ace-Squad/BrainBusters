@@ -4,14 +4,14 @@ import { Navigate, useNavigate } from "react-router-dom";
 
 
 
-const AddComment = ({currentUser, currentPost}) => {
+const AddComment = ({current_user, currentPost}) => {
 
 	const [newComment, setNewComment] = useState({
 		content: "",
 		post_id: currentPost.id,
-		user_id: currentUser.id,
+		user_id: current_user.id,
 		vote_count: 0,
-		username: currentUser.username
+		username: current_user.username
 	})
 
 	const [modalToggle, setModalToggle] = useState(false)
