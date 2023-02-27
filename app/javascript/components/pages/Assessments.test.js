@@ -1,30 +1,25 @@
 import { render, screen } from "@testing-library/react"
-import PostIndex from "./PostIndex"
+import Assessments from "./Assessments"
 import React from "react"
 import { BrowserRouter } from "react-router-dom"
 import mockPosts from "../mockPosts"
 
-
-
-describe("<PostIndex />", () => {
+describe("<Assessments/>", () => {
   it("renders without crashing", () => {
     const div = document.createElement("div")
-    render(
-      <BrowserRouter>
-        <PostIndex />
-      </BrowserRouter>, div)
+    render(<Assessments />, div)
   })
-  screen.logTestingPlaygroundURL()
-  it("has a heading", () => {
+  it("renders category cards", () => {
     const div = document.createElement("div")
     render(
       <BrowserRouter>
-        <PostIndex posts={mockPosts} />
+        <Assessments posts={mockPosts} />
       </BrowserRouter>, div)
     mockPosts.forEach(post => {
-      const postTitle = screen.getByText("Post Categories")
-      expect(postTitle).toBeInTheDocument()
+      const heading = screen.getByRole('heading', {
+        name: /assessments/i
+      })
+      expect(heading).toBeInTheDocument()
   })
-})
-  
+  })
 })
