@@ -27,7 +27,7 @@ describe("<PostEdit />", () => {
       </BrowserRouter>
     )
     const button = screen.getByRole('button', {
-      name: /Submit Updated Post/i
+      name: /Update Post/i
     })
     expect(button).toBeInTheDocument()
   })
