@@ -13,7 +13,7 @@ const Navigation = ({
 
     return (
         <>
-            <Nav className='nav'>
+            <Nav >
                     <NavItem className='nav-item'>
                         <NavLink to="/" className="nav-link">
                         <img
@@ -49,27 +49,29 @@ const Navigation = ({
                     </NavItem>
                 </>
                 )}
-                {!logged_in && (
-                <NavItem className='nav-item'>
-                    <a href={sign_in_route} className="nav-link">
-                    <Button className='nav-button'>Sign In</Button>
-                    </a>
-                    
-                </NavItem>
                 
-                )}
-                {!logged_in && (
-                <NavItem className='nav-item'>
-                    <a href={new_user_route} className="nav-link">
-                    <Button className='nav-button'>Sign Up</Button>
-                    </a>
-                </NavItem>
-                )}
-                <NavItem className='nav-item'>
-                    <NavLink to="/aboutus" className="nav-link">
-                            <Button className='nav-button'>About Us</Button>
-                    </NavLink>
-                </NavItem>
+                    {!logged_in && (
+                    <NavItem >
+                        <a href={sign_in_route} className="nav-link">
+                        <Button className='nav-button'>Sign In</Button>
+                        </a>
+                        
+                    </NavItem>
+                    
+                    )}
+                    {!logged_in && (
+                    <NavItem >
+                        <a href={new_user_route} className="nav-link">
+                        <Button className='nav-button'>Sign Up</Button>
+                        </a>
+                    </NavItem>
+                    )}
+                    <NavItem >
+                        <NavLink to="/aboutus" className="nav-link">
+                                <Button className='nav-button'>About Us</Button>
+                        </NavLink>
+                    </NavItem>
+               
             </Nav>
         </>
     )
