@@ -1,4 +1,4 @@
-const mockUsers = [
+const current_user = [
 
 {
     id: 1,
@@ -7,3 +7,5 @@ const mockUsers = [
     username: "arthur-look-a-like"
 }
 ]
+
+export default current_user 

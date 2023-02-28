@@ -24,8 +24,8 @@ const PostShow = ({ posts, current_user }) => {
             <div className="postshow-content" >
               <p>{currentPost.post_content}</p>
             </div> 
-            <AddComment currentUser={current_user} currentPost={currentPost}/>
-            <Comments currentUser={current_user} currentPost={currentPost}/>
+            <AddComment current_user={current_user} currentPost={currentPost}/>
+            <Comments current_user={current_user} currentPost={currentPost}/>
           </div> 
       )}
     

@@ -3,7 +3,8 @@ import { useParams } from "react-router-dom";
 import { Card, CardBody, CardTitle, CardSubtitle, CardGroup } from "reactstrap"
 
 
-const Comments = ({ currentPost}) => {
+
+const Comments = ({currentPost}) => {
   const [comments, setComments]= useState([])
   
   useEffect(() => {
