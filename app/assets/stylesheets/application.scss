@@ -8,28 +8,28 @@ body {
 // Home Page
 
 .home-para {
-  border: #C38612;
-  border-radius: 10px;
-  color:#6EAE3C;
-  background-color: white;
-  font-size: larger;
-  height: 350px;
-  width: 460px;
-  padding-bottom: 60%;
-  text-align: center;
-  border: 1px solid #fff;
-  padding: 15px;
-  position: absolute;
-  top: 50%;
-  right: 10%;
-  transform: translateY(-50%);
+  margin: auto;
+  max-width: 50%;
+  padding: 10px;
+  flex: 1;
+  text-align: left;
+  background-color: transparent;
+  color: whitesmoke;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch; 
+  width: 100%
 }
 
 .home-img {
-  height: 350px;
-  width: 460px;
-  padding-bottom: 60%;
-  position: absolute;
+ flex: 1;
+ max-width: 50%;
+ margin-left: 10%;
+ width: 100%;
+ height: auto;
 }
 
 .footer {
@@ -83,7 +83,7 @@ color: white;
   color: white;
   border: none;
   bottom: 10%;
-  width: 262px;
+  width: 85%;
   position: absolute;
   bottom: 10;
   display: flex;
@@ -131,8 +131,7 @@ color: white;
   margin-bottom: 10px;
 }
 
-.user-name{
-  
+.user-name{ 
 }
 
 .postshow-content {
