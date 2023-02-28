@@ -2,6 +2,7 @@ import React from "react"
 import matt from "../assets/matt.png"
 import nat from "../assets/nat.png"
 import awhit from "../assets/awhit.png"
+import romeo from "../assets/romeo.png"
 
 const AboutUs = () => {
   return (
@@ -26,9 +27,8 @@ const AboutUs = () => {
         <div className="about-romeo">
           <h3>Tech Lead: Romeo Yutig</h3>
             <p>Hi! I’m Romeo Yutig. Transitioning into a full-stack developer as a U.S. Army veteran has been extremely fun and rewarding! I’ve learned to embrace the challenges of coding, and try to approach problem solving with eager and open eyes. I currently reside in San Diego, California and love to explore the city and enjoy the weather with my family, and pets.</p>
-            <div className="romeo-img">
-              {/* <img src={romeo} alt=" romeo-image" /> */}
-            </div>
+              <img className="img-rom" src={romeo} alt=" romeo-image" />
+           
         </div>
         <div className="about-awhit">  
             <h3>Design Lead: A. Whitney</h3>

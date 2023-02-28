@@ -9,12 +9,14 @@ body {
 
 .home-para {
   margin: auto;
+  margin-right: 70px;
   max-width: 50%;
   padding: 10px;
   flex: 1;
-  text-align: left;
   background-color: transparent;
   color: whitesmoke;
+  text-align: justify;
+  font-size: larger;
 }
 
 .container {
@@ -24,12 +26,13 @@ body {
   width: 100%
 }
 
+
 .home-img {
  flex: 1;
  max-width: 50%;
- margin-left: 10%;
  width: 100%;
  height: auto;
+ margin-top: 20px;
 }
 
 .footer {
@@ -233,6 +236,12 @@ color: white;
   width: 50%;
   margin: auto;
   justify-content: center;
+}
+
+.img-rom {
+  width: 30%;
+  align-self: center;
+  border-radius: 50px;
 }
 
 .about-awhit {
