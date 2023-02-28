@@ -11,7 +11,9 @@ const renderShow = () => {
   render(
   <MemoryRouter initialEntries={["/postshow/1"]}>
     <Routes>
-    <Route path="postshow/:id" element={<PostShow posts={mockPosts} current_user= {mockUsers} comments = {mockComments}/>} />
+
+    <Route path="/postshow/:id" element={<PostShow posts={mockPosts} current_user= {mockUsers} comments = {mockComments}/>} />
+
     </Routes>
   </MemoryRouter>
   )
