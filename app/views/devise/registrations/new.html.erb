@@ -1,3 +1,4 @@
+<div class="form-body">
 <h2>Sign up</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -9,8 +10,8 @@
   </div>
 
   <div class="field">
-    <%= f.label :username, :class => "form-element" %>
-    <%= f.text_field :username, autofocus: true, autocomplete: "username", :class => "form-element" %>
+    <%= f.label :username %><br />
+    <%= f.text_field :username, autofocus: true, autocomplete: "username"%>
   </div>
 
   <div class="field">

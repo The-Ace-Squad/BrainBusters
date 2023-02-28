@@ -83,7 +83,7 @@ color: white;
   color: white;
   border: none;
   bottom: 10%;
-  width: 262px;
+  width: 85%;
   position: absolute;
   bottom: 10;
   display: flex;
@@ -131,9 +131,6 @@ color: white;
   margin-bottom: 10px;
 }
 
-.user-name{
-  
-}
 
 .postshow-content {
   color: black;
@@ -185,41 +182,77 @@ color: white;
 }
 
 .about-matt {
+  display: flex;
+  flex-direction: column;
   border: 20px solid black;
-  padding: 50px;
+  padding: 20px;
   background-color: #C38612;
   color: white;
   align-items: center;
   height: 80% ;
-  width: 80%;
+  width: 50%;
   margin: auto;
+  justify-content: center;
+}
+
+.img-matt {
+ width: 30%;
+ align-self: center;
+ border-radius: 50px;
 }
 
 .about-natally {
+  display: flex;
+  flex-direction: column;
   border: 20px solid black;
   padding: 50px;
-  background-color: #E72076;
+  background-color:#E72076;
+  color: white;
+  align-items: center;
   height: 80% ;
-  width: 80%;
+  width: 50%;
   margin: auto;
+  justify-content: center;
+}
+
+.img-nat {
+  width: 30%;
+  align-self: center;
+  border-radius: 50px;
 }
 
 .about-romeo {
+  display: flex;
+  flex-direction: column;
   border: 20px solid black;
   padding: 50px;
-  background-color: #6EAE3C;
+  background-color:#6EAE3C;
+  color: white;
+  align-items: center;
   height: 80% ;
-  width: 80%;
+  width: 50%;
   margin: auto;
+  justify-content: center;
 }
 
 .about-awhit {
+  display: flex;
+  flex-direction: column;
   border: 20px solid black;
   padding: 50px;
-  background-color: #0099D6;
+  background-color:#0099D6;
+  color: white;
+  align-items: center;
   height: 80% ;
-  width: 80%;
+  width: 50%;
   margin: auto;
+  justify-content: center;
+}
+
+.img-awhit {
+  width: 30%;
+  align-self: center;
+  border-radius: 50px;
 }
 
 // Create page styling
@@ -337,3 +370,19 @@ color: white;
   text-align: center;
 }
 
+// Devise
+
+.form-element {
+  margin: 10px;
+}
+
+.form-body {
+  background-color:#53bee8;
+  border-radius: 10px;
+  padding: 100px;
+  margin-left: 350px;
+  margin-right: 500px;
+  margin-top: 150px;
+  margin-bottom: 100px;
+  
+}
