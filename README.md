@@ -60,7 +60,7 @@ This project includes:
 - [Matthew Munoz, Product Manager](https://github.com/MLMunoz85)
 - [Natally Quintero, Project Manager](https://github.com/Nata19754)
 - [Romeo Yutig, Tech Lead](https://github.com/romeoyutig)
-- [Aileen Whitney, Design Lead](https://github.com/msawhitney)
+- [Aileen Whitney, Design Lead](https://github.com/msawhit)
 
 Like to contribute? [Contact Us](mailto:capstonerman@gmail.com)
 
